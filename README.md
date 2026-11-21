@@ -41,7 +41,7 @@ Cada aula nova vira uma pasta `Aulas-feitas/AAAA-MM-DD - Título/` com `roteiro.
 
 (Em versões mais antigas: `/plugin marketplace add apollodevvv/sin215` e depois `/plugin install sin215@sin215`.)
 
-**Claude.ai / app do Claude:** baixe o arquivo `sin215.plugin` da página de Releases (ou compacte esta pasta em .zip) e adicione em Personalizar → Plugins.
+**Claude.ai / app do Claude:** baixe o arquivo [sin215.plugin](https://github.com/apollodevvv/sin215/raw/main/sin215.plugin), abra o Claude, vá em Personalizar → Plugins e envie o arquivo.
 
 Depois de instalado, digite `/sin215` e as quatro opções aparecem.
 
