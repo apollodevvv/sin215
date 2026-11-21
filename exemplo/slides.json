@@ -1,0 +1,8 @@
+{"cor": "#2563EB", "slides": [
+ {"tipo": "capa", "titulo": "Listas em Python", "subtitulo": "Aula 05 · Algoritmos e Programação", "notas": "Boa noite, turma."},
+ {"tipo": "pergunta", "texto": "Como guardar as notas de 40 alunos sem criar 40 variáveis?", "notas": "Deixe 20 s para pensarem."},
+ {"tipo": "topicos", "titulo": "Ao final da aula você vai conseguir", "itens": ["Criar uma lista", "Acessar itens pelo índice", "Calcular a média de uma lista"], "notas": "Leia os objetivos."},
+ {"tipo": "secao", "titulo": "Mão no código", "notas": ""},
+ {"tipo": "codigo", "titulo": "Média de uma lista", "imagem": "prints/media.png", "legenda": "sum() soma, len() conta os itens", "notas": "Mostre linha a linha."},
+ {"tipo": "codigo", "titulo": "Lendo do teclado", "imagem": "prints/nome.png", "notas": "x"}
+]}
