@@ -4,10 +4,10 @@ Uma skill para o Claude (Claude.ai e Claude Code) feita para professores de prog
 
 | Comando | O que faz |
 |---|---|
-| `/sin215 start` | Mostra o passo a passo, pergunta o tema e confere na pasta `Aulas-feitas` se já existe uma aula com título igual ou parecido. Se existir, pede confirmação antes de criar outra. |
-| `/sin215 explico-para-voce` | Explica o assunto para o professor de forma objetiva, com códigos executados (saída real), erros comuns dos alunos e gráficos quando pedido. |
-| `/sin215 roteiro-de-aula` | Roteiro slide a slide: o que fica na tela, o que falar, pergunta para a turma, transição e tempo. |
-| `/sin215 maquina-de-slides` | Gera o `.pptx` com o print de cada código já com a saída real, e as falas do roteiro nas notas do apresentador. |
+| `/sin215:start` | Mostra o passo a passo, pergunta o tema e confere na pasta `Aulas-feitas` se já existe uma aula com título igual ou parecido. Se existir, pede confirmação antes de criar outra. |
+| `/sin215:explico-para-voce` | Explica o assunto para o professor de forma objetiva, com códigos executados (saída real), erros comuns dos alunos e gráficos quando pedido. |
+| `/sin215:roteiro-de-aula` | Roteiro slide a slide: o que fica na tela, o que falar, pergunta para a turma, transição e tempo. |
+| `/sin215:maquina-de-slides` | Gera o `.pptx` com o print de cada código já com a saída real, e as falas do roteiro nas notas do apresentador. |
 
 ## A regra principal: não inventar
 
@@ -16,28 +16,34 @@ Todo código que aparece foi executado. O script `print_codigo.py` roda o códig
 ## Estrutura
 
 ```
-sin215/
-├── skills/sin215/SKILL.md        ← a skill
-├── Aulas-feitas/                 ← pasta onde as aulas são salvas
-│   └── _ferramentas/
-│       ├── print_codigo.py       ← print do código + saída real
-│       └── montar_slides.py      ← monta o .pptx a partir de um JSON
-└── exemplo/                      ← uma aula de exemplo (Listas em Python)
+sin215/                              ← o plugin
+├── .claude-plugin/plugin.json
+├── skills/
+│   ├── start/SKILL.md
+│   ├── explico-para-voce/SKILL.md
+│   ├── roteiro-de-aula/SKILL.md
+│   └── maquina-de-slides/
+│       ├── SKILL.md
+│       └── scripts/                 ← print_codigo.py e montar_slides.py
+├── Aulas-feitas/                    ← onde as aulas são salvas
+└── exemplo/                         ← uma aula de exemplo (Listas em Python)
 ```
 
 Cada aula nova vira uma pasta `Aulas-feitas/AAAA-MM-DD - Título/` com `roteiro.md`, `codigos/`, `prints/`, `slides.json` e o `.pptx`.
 
 ## Como instalar
 
-**Claude Code:** copie a pasta `skills/sin215` para `~/.claude/skills/sin215` (no Windows, `C:\Users\<você>\.claude\skills\sin215`). Ou, com o Skills CLI:
+**Claude Code:**
 
-```bash
-npx skills add apollodevvv/sin215
+```
+/plugin install sin215 --marketplace apollodevvv/sin215
 ```
 
-**Claude.ai:** compacte a pasta `skills/sin215` em um `.zip` e envie em Configurações → Capacidades → Skills.
+(Em versões mais antigas: `/plugin marketplace add apollodevvv/sin215` e depois `/plugin install sin215@sin215`.)
 
-Depois, deixe a pasta `Aulas-feitas` no lugar onde você trabalha (ou na sua pasta pessoal). Se ela não existir, a skill cria.
+**Claude.ai / app do Claude:** baixe o arquivo `sin215.plugin` da página de Releases (ou compacte esta pasta em .zip) e adicione em Personalizar → Plugins.
+
+Depois de instalado, digite `/sin215` e as quatro opções aparecem.
 
 ## Requisitos
 

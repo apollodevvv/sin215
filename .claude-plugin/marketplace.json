@@ -1,0 +1,16 @@
+{
+  "name": "sin215",
+  "owner": {
+    "name": "apollodevvv"
+  },
+  "plugins": [
+    {
+      "name": "sin215",
+      "source": "./",
+      "description": "Preparação de aulas de programação do tema aos slides, com print do código e saída real."
+    }
+  ],
+  "metadata": {
+    "description": "Plugin sin215 para professores de programação."
+  }
+}

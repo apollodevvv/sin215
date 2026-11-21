@@ -1,0 +1,10 @@
+{
+  "name": "sin215",
+  "version": "1.0.0",
+  "description": "Preparação de aulas de programação do tema aos slides: start, explico-para-voce, roteiro-de-aula e maquina-de-slides (com print do código e saída real).",
+  "author": { "name": "apollodevvv" },
+  "homepage": "https://github.com/apollodevvv/sin215",
+  "repository": "https://github.com/apollodevvv/sin215",
+  "license": "MIT",
+  "keywords": ["professor", "aula", "programação", "slides", "educação", "pptx"]
+}
